@@ -14,7 +14,7 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="currency">FCFA</string>
+    <string name="currency">XAF</string>
     <string name="selectDate">select a date</string>
     <string name="noteText">ajouter une note</string>
     <string name="selectImage">add a image</string>
@@ -31,7 +31,7 @@
     <string name="more_settings">more and settings</string>
     <string name="application_name">Kola Test</string>
     <string name="description">Spendee clone for Kolafin evaluation test</string>
-    <string name="wellcom">wellcom</string>
+    <string name="wellcom">wellcome</string>
     <string name="kola">powered by kolaFin</string>
     <string name="sending_data">sending data ...</string>
     <string name="wallet_creation">wallet creation</string>

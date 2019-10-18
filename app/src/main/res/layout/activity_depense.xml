@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|center"
                 android:layout_weight="1"
-                android:fontFamily="@font/adamina"
+                android:fontFamily="@font/sfregular"
                 android:text="1000"
                 android:gravity="end"
                 android:textColor="@color/com_facebook_button_login_silver_background_color"
@@ -52,7 +52,7 @@
                 android:textStyle="bold"
                 android:gravity="end"
                 android:textColor="@color/com_facebook_button_login_silver_background_color"
-                android:fontFamily="@font/adamina"
+                android:fontFamily="@font/sfregular"
                 android:text="@string/currency"
                 android:textSize="@dimen/textSize"
                 >
@@ -84,6 +84,7 @@
             android:textAlignment="center"
             android:id="@+id/dateTXT"
             android:padding="@dimen/dimen10_dp"
+            android:fontFamily="@font/sfregular"
             android:drawableStart="@drawable/ic_calender"
             android:textSize="@dimen/textSize">
 
@@ -110,6 +111,7 @@
             android:padding="@dimen/dimen10_dp"
             android:textAlignment="center"
             android:id="@+id/selectImage"
+            android:fontFamily="@font/sfregular"
             android:textSize="@dimen/textSize"
             />
     </LinearLayout>
@@ -133,6 +135,7 @@
             android:textSize="@dimen/textSize"
             android:textAlignment="center"
             android:id="@+id/noteTXT"
+            android:fontFamily="@font/sfregular"
             android:padding="@dimen/dimen10_dp"
             android:drawableStart="@drawable/ic_pencil"
             />
@@ -157,6 +160,7 @@
             android:drawableStart="@drawable/ic_repeat"
             android:padding="@dimen/dimen10_dp"
             android:textAlignment="center"
+            android:fontFamily="@font/sfregular"
             android:textSize="@dimen/textSize"
             >
 

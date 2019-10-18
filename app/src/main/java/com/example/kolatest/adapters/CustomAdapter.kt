@@ -1,6 +1,7 @@
 package com.example.kolatest.adapters
 
 import android.content.Context
+import android.graphics.Typeface
 
 import android.widget.TextView
 import android.view.LayoutInflater
@@ -56,11 +57,16 @@ class CustomAdapter(private val dataSet: ArrayList<DataModel>, internal var mCon
 
             viewHolder = ViewHolder()
             val inflater = LayoutInflater.from(context)
+
             convertView = inflater.inflate(R.layout.row_item, parent, false)
             viewHolder.txtName = convertView!!.findViewById(R.id.name)
+
             viewHolder.txtType = convertView!!.findViewById(R.id.type)
+
             viewHolder.txtVersion = convertView!!.findViewById(R.id.version_number)
+            
             viewHolder.info = convertView!!.findViewById(R.id.item_info) as ImageView
+
 
             result = convertView
 

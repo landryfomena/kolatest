@@ -27,6 +27,7 @@
                 android:layout_height="56dp"
                 android:textAlignment="center"
                 android:hint="enter the wallets nme"
+                android:fontFamily="@font/sfregular"
                 android:drawableStart="@drawable/ic_account_balance_wallet_black_64dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/textSize">
@@ -37,6 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
+                android:fontFamily="@font/sfregular"
                 android:hint="enter the wallet purpuse"
                 android:id="@+id/descriptionWalletText"
                 android:drawableStart="@drawable/ic_assignment_black_64dp"
@@ -61,6 +63,7 @@
                     android:layout_marginTop="@dimen/dimen10_dp"
                     android:layout_marginRight="@dimen/dimen10_dp"
                     android:layout_marginBottom="@dimen/dimen10_dp"
+                    android:fontFamily="@font/sfregular"
                     android:text="@string/add_wallet"
                     android:textColor="@android:color/holo_red_dark">
 

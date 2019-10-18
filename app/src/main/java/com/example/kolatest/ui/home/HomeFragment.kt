@@ -106,7 +106,7 @@ class HomeFragment : Fragment() {
                     Log.e("data model", "" + wallet.toString())
 
                 }
-                walletAmount!!.text=totalAmount.toString()
+                walletAmount!!.text= " XAF :"+totalAmount
                 for (walletModel in wallets) {
                     Log.e("wallet", "" + walletModel)
                 }

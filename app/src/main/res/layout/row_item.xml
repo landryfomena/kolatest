@@ -10,6 +10,7 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/sfregular"
         android:layout_alignParentTop="true"
         android:text="Marshmallow"
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -21,6 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/name"
+        android:fontFamily="@font/sfregular"
         android:layout_marginTop="5dp"
         android:text="Android 6.0"
         android:textColor="@color/colorPrimary"
@@ -42,10 +44,12 @@
         android:layout_centerInParent="true">
 
         <TextView
+
             android:id="@+id/version_heading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="API: "
+            android:text="XAF: "
+            android:fontFamily="@font/sfregular"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold" />
 
@@ -54,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="23"
+            android:fontFamily="@font/sfregular"
             android:textAppearance="?android:attr/textAppearanceButton"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold" />

@@ -25,8 +25,15 @@ class SplashActivity : AppCompatActivity() {
             .withLogo(R.drawable.logo)
             .withAfterLogoText(resources.getString(R.string.description))
         //add custom font
-        val pacificoFont = Typeface.createFromAsset(assets, "Pacifico.ttf")
+        val pacificoFont = Typeface.createFromAsset(assets, "sfregular.otf")
         config.afterLogoTextView.setTypeface(pacificoFont)
+        config.beforeLogoTextView.setTypeface(pacificoFont)
+        config.headerTextView.setTypeface(pacificoFont)
+        config.footerTextView.setTypeface(pacificoFont)
+        config.afterLogoTextView.setTextColor(resources.getColor(R.color.colorPrimary))
+        config.beforeLogoTextView.setTextColor(resources.getColor(R.color.colorPrimary))
+        config.headerTextView.setTextColor(resources.getColor(R.color.colorPrimary))
+        config.footerTextView.setTextColor(resources.getColor(R.color.colorPrimary))
 
         //change text color
 
