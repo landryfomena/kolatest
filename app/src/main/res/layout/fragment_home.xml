@@ -77,6 +77,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/walleztAmount"
+                                android:id="@+id/wallAmount"
                                 android:textColor="@android:color/holo_red_dark"
                                 android:textSize="@dimen/textSize">
 
