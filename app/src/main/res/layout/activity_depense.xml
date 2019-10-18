@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Depense">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/entete"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <com.nightonke.boommenu.BoomMenuButton
+            android:id="@+id/bmb"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bmb_buttonEnum="textOutsideCircle"
+            app:bmb_piecePlaceEnum="piecePlace_dot_9_1"
+            app:bmb_buttonPlaceEnum="buttonPlace_sc_9_1"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="1"
+                android:fontFamily="@font/adamina"
+                android:text="1000"
+                android:gravity="end"
+                android:textColor="@color/com_facebook_button_login_silver_background_color"
+                android:textSize="@dimen/textSize">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:textColor="@color/com_facebook_button_login_silver_background_color"
+                android:fontFamily="@font/adamina"
+                android:text="@string/currency"
+                android:textSize="@dimen/textSize"
+                >
+
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/dimen10_dp"
+        android:paddingRight="@dimen/dimen10_dp"
+        android:orientation="horizontal"
+        android:id="@+id/calender"
+        android:layout_marginTop="@dimen/dimen50_dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/entete"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selectDate"
+            android:textAlignment="center"
+            android:id="@+id/dateTXT"
+            android:padding="@dimen/dimen10_dp"
+            android:drawableStart="@drawable/ic_calender"
+            android:textSize="@dimen/textSize">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen10_dp"
+        android:paddingRight="@dimen/dimen10_dp"
+        android:id="@+id/image"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/commentaire"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selectImage"
+            android:drawableStart="@drawable/ic_image"
+            android:padding="@dimen/dimen10_dp"
+            android:textAlignment="center"
+            android:id="@+id/selectImage"
+            android:textSize="@dimen/textSize"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen10_dp"
+        android:paddingRight="@dimen/dimen10_dp"
+        android:id="@+id/commentaire"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/calender"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noteText"
+            android:inputType="text|textLongMessage"
+            android:textSize="@dimen/textSize"
+            android:textAlignment="center"
+            android:id="@+id/noteTXT"
+            android:padding="@dimen/dimen10_dp"
+            android:drawableStart="@drawable/ic_pencil"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen10_dp"
+        android:paddingRight="@dimen/dimen10_dp"
+        android:id="@+id/reapeat"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/image"
+
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_frequency"
+            android:id="@+id/frequencyTXt"
+            android:drawableStart="@drawable/ic_repeat"
+            android:padding="@dimen/dimen10_dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize"
+            >
+
+        </EditText>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/frequency"
+                android:layout_margin="@dimen/dimen10_dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_height="match_parent">
+            </Spinner>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:backgroundTint="@color/colorPrimary"
+    android:id="@+id/sendTransaction"
+    app:rippleColor="@color/colorPrimary"
+    android:src="@drawable/ic_plus_one_black_24dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_margin="@dimen/textSize"
+    android:background="@android:drawable/btn_plus"
+
+>
+
+</com.google.android.material.floatingactionbutton.FloatingActionButton>
+</androidx.constraintlayout.widget.ConstraintLayout>

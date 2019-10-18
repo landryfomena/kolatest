@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "358239232762",
+    "firebase_url": "https://kolatest-445c7.firebaseio.com",
+    "project_id": "kolatest-445c7",
+    "storage_bucket": "kolatest-445c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358239232762:android:059b7d49e4c0b9d08c5f43",
+        "android_client_info": {
+          "package_name": "com.example.kolatest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358239232762-6o84vk2s2kf6sai842g4gao5dfdpr9bo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kolatest",
+            "certificate_hash": "de77b46a780408faeeab70814f96207ebbcc06be"
+          }
+        },
+        {
+          "client_id": "358239232762-k3i0j8pkofg25u374c4v5cu8k3ncphdm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX1f_9DzXpyFWjUoI8XHuRMAeevzgizTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358239232762-k3i0j8pkofg25u374c4v5cu8k3ncphdm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

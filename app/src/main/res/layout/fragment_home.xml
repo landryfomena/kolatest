@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/viewMaster"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cationsview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/textSize"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titreWallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="@dimen/textSize"
+                        android:text="@string/wallet"
+                        android:textSize="@dimen/textSize">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/walletdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/iconswallet">
+
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/walletDislayedName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/walletName"
+                                android:textSize="@dimen/textSize">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/walleztAmount"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="@dimen/textSize">
+
+                            </TextView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bootomTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/add_cash_wallet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/textSize"
+                                android:layout_marginBottom="@dimen/textSize"
+                                android:text="@string/add_wallet"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/menu_text">
+
+                            </TextView>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/connect_banc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:padding="@dimen/textSize">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/textSize"
+                                android:layout_marginBottom="@dimen/textSize"
+                                android:text="@string/connect_banc"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/menu_text">
+
+                            </TextView>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:background="@drawable/com_facebook_button_background"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="2"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+android:backgroundTint="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/dimen10_dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@color/colorPrimary"
+                                android:layout_margin="@dimen/textSize"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:src="@drawable/ic_poll_black"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:layout_height="wrap_content">
+
+                                </ImageView>
+                                <TextView
+
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:textColor="@android:color/background_light"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/bord_chart"
+                                    >
+
+                                </TextView>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/dimen10_dp"
+                            android:background="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_margin="@dimen/textSize"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:background="@color/colorPrimary"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:src="@drawable/ic_attach_money"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:layout_height="wrap_content">
+
+                                </ImageView>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:textColor="@android:color/background_light"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/budgets"
+                                    >
+
+                                </TextView>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="2"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+android:backgroundTint="@color/colorPrimary"
+                            android:layout_margin="@dimen/dimen10_dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:background="@color/colorPrimary"
+                                android:layout_margin="@dimen/textSize"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:src="@drawable/ic_add_alert"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:layout_height="wrap_content">
+
+                                </ImageView>
+                                <TextView
+
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:textColor="@android:color/background_light"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/activity"
+                                    >
+
+                                </TextView>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/dimen10_dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:background="@color/colorPrimary"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_margin="@dimen/textSize"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:background="@color/colorPrimary"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:src="@drawable/ic_more_horiz"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:layout_height="wrap_content">
+
+                                </ImageView>
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:textColor="@android:color/background_light"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/more_settings"
+                                    >
+
+                                </TextView>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
