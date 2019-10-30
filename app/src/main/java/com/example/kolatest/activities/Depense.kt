@@ -1,6 +1,7 @@
 package com.example.kolatest.activities
 
 import android.app.DatePickerDialog
+import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +10,9 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kolatest.Acceuil
 import com.example.kolatest.R
+import com.example.kolatest.model.DataModel
 import com.example.kolatest.model.TransactionModel
+import com.example.kolatest.model.WalletModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.firestore.FirebaseFirestore
 import com.nightonke.boommenu.BoomButtons.BoomButton
@@ -18,6 +21,11 @@ import com.nightonke.boommenu.BoomMenuButton
 import com.nightonke.boommenu.OnBoomListener
 import kotlinx.android.synthetic.main.activity_depense.*
 import java.util.*
+import kotlin.collections.ArrayList
+import android.widget.ArrayAdapter
+
+
+
 
 
 class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -25,9 +33,11 @@ class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     var bmb: BoomMenuButton? = null
     var rating: Spinner? = null
+    var wallets: Spinner? = null
     var price: TextView? = null
     var note: EditText? = null
     var image: TextView? = null
+    var country = ArrayList<String>()
     var send: FloatingActionButton? = null
     var date: EditText? = null
     var ratingTxt: EditText? = null
@@ -43,13 +53,17 @@ class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         //Binding with xml
         bmb = findViewById(R.id.bmb)
         rating = findViewById(R.id.frequency)
+
         rating!!.onItemSelectedListener = this
+
+
         price = findViewById(R.id.amount)
         note = findViewById(R.id.noteTXT)
         image = findViewById(R.id.selectImage)
         send = findViewById(R.id.sendTransaction)
         date = findViewById(R.id.dateTXT)
         ratingTxt = findViewById(R.id.frequencyTXt)
+        wallets = findViewById(R.id.WalletIdSpinner)
         var images = arrayListOf<Int>()
         images.add(R.drawable.gender_neutral_user_filled_24px)
         images.add(R.drawable.home_page_24px)
@@ -60,6 +74,7 @@ class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         images.add(R.drawable.subway_24px)
         images.add(R.drawable.subway_filled_24px)
         images.add(R.drawable.theatre_mask_24px)
+
 
         for (i in 0 until bmb!!.getPiecePlaceEnum().pieceNumber()) {
             val builder = TextOutsideCircleButton.Builder()
@@ -117,6 +132,7 @@ class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             // Apply the adapter to the spinner
             rating!!.adapter = adapter
         }
+        getAllWallets()
 
         //date picker
         date!!.setOnClickListener(View.OnClickListener {
@@ -164,7 +180,15 @@ class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
         // On selecting a spinner item
         val item = parent.getItemAtPosition(position).toString()
-        ratingTxt!!.setText(item)
+
+        if(view==rating){
+            ratingTxt!!.setText(item)
+        }else{
+            var wallet:TextView?=null
+            wallet = findViewById(R.id.walletIdText)
+            wallet.text= item
+        }
+
 
         // Showing selected spinner item
         Toast.makeText(parent.context, "Selected: $item", Toast.LENGTH_LONG).show()
@@ -246,6 +270,39 @@ class Depense : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             }
 
 
+    }
+
+    open fun getAllWallets() {
+        val wallets = ArrayList<WalletModel>()
+        var totalAmount: Double = 0.0
+        db.collection("wallets")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    var wallet = document.toObject(WalletModel::class.java)
+                    wallet.id = document.id
+                    wallets.add(wallet)
+
+                    for (wallet in wallets) {
+                        country.add(wallet.walletName!!)
+                    }
+
+                    //Creating the ArrayAdapter instance having the country list
+                    val aa = ArrayAdapter(this, android.R.layout.simple_spinner_item, country)
+                    aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                    //Setting the ArrayAdapter data on the Spinner
+                    this.wallets!!.setAdapter(aa)
+
+                    Log.e("data model", "" + wallet.toString())
+
+                }
+
+                Log.e("taille des elements", "" + wallets.size)
+
+            }
+            .addOnFailureListener { exception ->
+                Log.w(ContentValues.TAG, "Error getting documents.", exception)
+            }
     }
 
 

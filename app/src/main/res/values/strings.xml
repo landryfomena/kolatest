@@ -42,6 +42,7 @@
     <string name="transaction_created">transaction perfectly creared</string>
     <string name="transaction_amount">1000</string>
     <string name="date">11/11/2011</string>
+    <string name="choose_wallet">choose a wallet</string>
 
     <string-array name="country_arrays">
         <item>dayly</item>

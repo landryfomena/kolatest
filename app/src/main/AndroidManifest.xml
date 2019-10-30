@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.TransactionDetailsActivity"></activity>
+        <activity android:name=".activities.SelectWalletActivity"></activity>
+        <activity android:name=".SelectAwallet" />
+        <activity android:name=".activities.TransactionDetailsActivity" />
         <activity android:name=".activities.Depenses" />
         <activity android:name=".ui.home.Transactions" />
         <activity android:name=".activities.LoginActivity" />

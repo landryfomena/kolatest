@@ -173,9 +173,55 @@
                 android:id="@+id/frequency"
                 android:layout_margin="@dimen/dimen10_dp"
                 android:backgroundTint="@color/colorPrimary"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
             </Spinner>
         </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dimen10_dp"
+        android:paddingTop="@dimen/dimen10_dp"
+        android:layout_marginTop="@dimen/dimen10_dp"
+        android:paddingLeft="@dimen/dimen10_dp"
+        android:paddingRight="@dimen/dimen10_dp"
+        android:id="@+id/walletIdLayout"
+        android:gravity="center_vertical"
+        android:weightSum="4"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/reapeat"
+
+        >
+
+        <EditText
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_wallet"
+            android:id="@+id/walletIdText"
+            android:drawableStart="@drawable/iconswallet"
+            android:padding="@dimen/dimen10_dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/sfregular"
+            android:textSize="@dimen/textSize"
+            >
+
+        </EditText>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/WalletIdSpinner"
+                android:layout_margin="@dimen/dimen10_dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_height="wrap_content">
+            </Spinner>
+        </androidx.cardview.widget.CardView>
+
 
 
     </LinearLayout>
